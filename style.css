@@ -1,0 +1,371 @@
+body { text-align:center;
+  height: 100%;
+  background-color: gray;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+        }
+  
+     ul { display: inline-block; text-align: left;
+  padding-right: 25px;
+
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 84px;
+  background-color: #0B0B0B;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+.hamburger{
+  display: none;
+}
+@media only screen and (max-width: 1000px) {
+  .hamburger{
+      display: flex;
+      flex-direction: column;
+      padding: 28px;
+      padding-top: 28px;
+      cursor: pointer;
+  }
+  .hamburger div{
+      width: 35px;
+      height: 4px;
+      background-color: white;
+      margin: 4px;
+      border-radius: 2px;
+  }
+}
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  padding: 16px;
+}
+
+@media only screen and (max-width: 1000px) {
+.nav{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0px;
+    height: 800px;
+    width: 100%;
+    top: 84px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    background-color: #0B0B0B;
+    z-index: 9999;
+}
+
+.navlink{
+    opacity: 0%;
+}
+}
+
+.nav-active {
+display: flex;
+transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+from{
+    opacity: 0%;
+    transform: translateX(-50px);
+}
+to{
+    opacity:100%;
+    transform: translateX(0px);
+}
+}
+
+.toggle .line1{
+transform: rotate(-45deg) translate(-5px,12px);
+transition: 0.3s ease;
+}
+
+.toggle .line2{
+opacity: 0;
+}
+
+.toggle .line3{
+transform: rotate(45deg) translate(-5px,-12px);
+transition: 0.3s ease;
+}
+
+.navlink {
+  color: white;
+  text-decoration: none;
+  padding: 16px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.navlink{
+opacity: 0.4;
+}
+
+.navlogo {
+  display: flex;
+  justify-content: center;
+  padding-right: 350px;
+  padding-top: 4px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .navlogo{
+      display: flex;
+      justify-content: center;
+      padding-right: 8px;
+      padding-left: 0px;
+  }
+}
+
+.navsocials {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 28px;
+}
+
+.navsocials:hover{
+opacity: 0.4;
+}
+
+.heroimg {
+    position: relative;
+    width: auto;
+    height: 500px;
+    overflow: hidden;
+    background: url("Images/GDuralCaptionBackDark2.png") 
+    no-repeat center;
+    background-size: cover;
+}
+
+.myWorkContainer{
+  display: flex;
+  width: 100%;
+  background-color: #0B0B0B;
+  justify-content: center;
+ 
+}
+
+.myWorkDiv{
+  display: flex;
+  padding: 16px;
+}
+
+.myWork{
+  display: flex;
+  color: white;
+  font-size: 36px;
+  letter-spacing: auto;
+  line-height: 0;
+  font-weight: 100;
+  padding: 16px;
+}
+
+
+
+#categoryGrid {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: 300px 300px 20px;
+grid-template-areas:
+  "Project1 Project2 Project3"
+  "Project1 Project2 Project3"
+;
+}
+
+  
+  #Project1 {
+    grid-area: Project1;
+    background-image: url("Images/HomeProjectImages3-01.png")
+    ;
+  
+  }
+  #Project2 {
+    grid-area: Project2;
+    background-image: url("Images/HomeProjectImages1-01.png")
+    ;
+  }
+  
+  #Project3 {
+    grid-area: Project3;
+    background-image: url("Images/HomeProjectImages2-01.png")
+    ;
+  }
+  
+#Project1:hover{
+    background-image: url("Images/HomeProjectImages3_hover-01.png")
+    ;
+
+    }
+#Project2:hover{
+        background-image: url("Images/HomeProjectImages1_hover-01.png")
+        ;
+        }    
+#Project3:hover{
+            background-image: url("Images/HomeProjectImages2_hover-01.png")
+            ;
+        }
+  
+        .categoryGridArea {
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          margin: 5px;
+          cursor: pointer;
+          display: grid;
+          align-content: end;
+        }
+        
+        .heading {
+          background-color: rgba(0,0,0,0.7);
+          padding: 15px;
+          height: 25px;
+          color: white;
+          font-size: 18px;
+          border-bottom: 5px solid #FF6200;
+        }
+        
+      .subHeading {
+          text-align: center;
+          border-bottom: 2px solid black;
+          width: 300px;
+          margin: 50px auto;
+        }
+        
+        h3 {
+          font-size: 32px;
+          font-weight: 300;
+          margin: 0px 0px;
+        }
+        
+        #headline p {
+          max-width: 350px;
+          font-size: 16px;
+          font-weight: 300;
+          margin: 0px 0px;
+          color: #636364;
+        }
+        
+        @media only screen and (max-width: 600px) {
+          #headline {
+            position: static;
+            margin: 20px;
+          }
+         
+          #categoryGrid {
+          grid-template-areas:
+              "Project1"
+              "Project2"
+              "Project3"
+          ;
+          }
+        }
+      
+        #HeadProject1 {
+          grid-area: HeadProject1;
+          }
+          
+        #HeadProject2 {
+          grid-area: HeadProject2;
+         }
+        
+        #HeadProject3 {
+          grid-area: HeadProject3;
+         
+        }
+      
+        #categoryGrid2 {
+          margin: 0px 5%;
+          display: grid;
+         grid-template-areas:
+          "HeadProject1 HeadProject2 HeadProject3"
+         }
+      
+      .categoryGridArea2 {
+        margin: 5px;
+        }
+      @media (max-width: 600px) {
+          #headline {position: static;
+              margin: 20px;
+        }
+      #categoryGrid2 {
+          grid-template-areas:
+          "HeadProject1"
+          "HeadProject2"
+          "HeadProject3"  
+      }
+      
+      @media only screen and (max-width: 920px) {
+        .workGrid{
+        grid-template-columns: 430px;
+        }
+      }
+      
+      @media only screen and (max-width: 470px) {
+        .workGrid{
+        grid-template-columns: 85%;
+        }
+      }
+      
+      .gridItem:hover{
+        opacity: 0.4;
+      }
+      
+      @media only screen and (max-width: 470px) {
+        .gridItem{
+        scale: 85%;
+        }
+      }
+      
+      @media only screen and (max-width: 470px) {
+      .workImg{
+        width: 100%;
+        height: auto;
+        }
+      }
+      
+      footer{
+          display: flex;
+          background-size: cover;
+          background-color: #1D1D1D;
+          height: 220px;
+          width: 100%;
+      }
+      
+      .footerDiv{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+      }
+      
+      .footerSocials{
+          display: flex;
+          padding-top: 24px;
+          padding-bottom: 16px;
+      }
+      
+      .footertext{
+          color: white;
+          line-height: 0;
+      }
+      
+      .copyright{
+          color: #686868;
+          padding-top: 16px;
+      }
