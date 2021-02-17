@@ -8,7 +8,7 @@ p {
 .customNav {
   position: fixed;
   width: 100%;
-  background: url("../images/transparency.png");
+  background: url("images/transparency.png");
   background-color: transparent !important;
   background-size: cover;
   z-index: 10;
@@ -33,7 +33,7 @@ p {
 }
 
 .jumbotron {
-  background-image: url(/Users/philipdural/Desktop/00-MyCode/UX_UI_HW_20_Local/CaseStudy1/images/GDuralCaptionBackDark2.png)
+  background-image: url(images/GDuralCaptionBackDark2.png)
   ;
   background-size: cover;
   background-repeat: no-repeat;
